@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>XIX Vodka</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+      }
+      nav {
+        background-color: #ccc;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav li {
+        margin: 0 10px;
+      }
+      nav a {
+        color: #333;
+        text-decoration: none;
+      }
+      main {
+        padding: 20px;
+      }
+      section {
+        margin-bottom: 20px;
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>XIX Vodka</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="about">
+        <h2>About XIX Vodka</h2>
+        <p>XIX Vodka is a premium spirit made from the finest ingredients. Our vodka is crafted to deliver a smooth and satisfying taste experience.</p>
+      </section>
+      <section id="products">
+        <h2>Our Products</h2>
+        <ul>
+          <li>XIX Vodka Original</li>
+          <li>XIX Vodka Citrus</li>
+          <li>XIX Vodka Berry</li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="submit-form.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright © 2023 XIX Vodka</p>
+    </footer>
+  </body>
+</html>
