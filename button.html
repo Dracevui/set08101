@@ -1,0 +1,22 @@
+<button id="myButton">Click me!</button>
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+button:hover {
+  padding: 20px 40px;
+  font-size: 18px;
+}
+
+document.getElementById("myButton").addEventListener("mouseover", function(){
+  this.style.padding = "20px 40px";
+  this.style.fontSize = "18px";
+});
+
+document.getElementById("myButton").addEventListener("mouseout", function(){
+  this.style.padding = "10px 20px";
+  this.style.fontSize = "16px";
+});
+    
