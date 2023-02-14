@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Potato-Themed Food Recipes and Health Benefits</title>
+    <title>Potatoes</title>
     <style>
       body {
         background-color: brown;
@@ -52,10 +52,16 @@
         text-align: center;
       }
     </style>
+    <script>
+      function searchFunction() {
+        var input = document.getElementById("search").value;
+        // Do something with the input value, such as search a list of items
+      }
+      </script>
   </head>
   <body>
     <header>
-      <h1>Potato-Themed Food Recipes and Health Benefits</h1>
+      <h1>Potatoes</h1>
     </header>
     <nav>
       <ul>
@@ -64,6 +70,8 @@
         <li><a href="#facts">Potato Facts</a></li>
       </ul>
     </nav>
+    <input type="text" id="search" name="search" placeholder="Search...">
+    <button onclick="searchFunction()">Search</button>
     <main>
       <section id="recipes">
         <h2>Potato-Themed Food Recipes</h2>
