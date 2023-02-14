@@ -51,40 +51,40 @@
       .center {
         text-align: center;
       }
+      .temp-highlight {
+        background-color: yellow;
+      }
     </style>
     <script>
-      var highlightedIndex = -1;
-      var highlightedText;
-
+      var searchIndex = -1; // initialize index to -1
+      var matchedElements = [];
+      
       function searchFunction() {
-        var input = document.getElementById("search").value;
-        var content = document.body.innerHTML;
-        var pattern = new RegExp(input, "gi");
-
-        if (input) {
-          if (highlightedIndex == -1) {
-            highlightedIndex = 0;
-          } else {
-            highlightedIndex = highlightedIndex + 1;
+        var input, filter, content, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+        content = document.body.innerHTML;
+        matchedElements = [];
+      
+        var elements = document.getElementsByTagName("*");
+        for (i = 0; i < elements.length; i++) {
+          txtValue = elements[i].textContent || elements[i].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            matchedElements.push(elements[i]);
           }
-
-          content = content.replace(highlightedText, highlightedText.replace('<mark>', '').replace('</mark>', ''));
-
-          highlightedText = content.match(pattern)[highlightedIndex];
-
-          if (highlightedText) {
-            content = content.replace(highlightedText, '<mark>' + highlightedText + '</mark>');
-            document.body.innerHTML = content;
-            var top = document.getElementsByTagName('mark')[0].getBoundingClientRect().top + window.pageYOffset - 100; // adjust scroll position as needed
-            window.scrollTo({top: top, behavior: 'smooth'});
-          } else {
-            alert("No more matches found");
-            highlightedIndex = -1;
-            content = content.replace('<mark>', '').replace('</mark>', '');
-            document.body.innerHTML = content;
+        }
+        
+        if (matchedElements.length > 0) {
+          if (searchIndex >= matchedElements.length - 1) {
+            searchIndex = -1;
           }
+          if (searchIndex >= 0) {
+            matchedElements[searchIndex].classList.remove("temp-highlight");
+          }
+          searchIndex++;
+          matchedElements[searchIndex].classList.add("temp-highlight");
         } else {
-          alert("Please enter a search term");
+          alert("No matches found.");
         }
       }
     </script>
