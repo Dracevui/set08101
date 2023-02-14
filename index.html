@@ -53,23 +53,41 @@
       }
     </style>
     <script>
+      var highlightedIndex = -1;
+      var highlightedText;
+
       function searchFunction() {
         var input = document.getElementById("search").value;
+        var content = document.body.innerHTML;
+        var pattern = new RegExp(input, "gi");
+
         if (input) {
-          if (window.find(input)) {
-            document.designMode = "on";
-            var range = window.getSelection().getRangeAt(0);
-            var highlight = document.createElement("span");
-            highlight.style.backgroundColor = "yellow";
-            highlight.appendChild(range.extractContents());
-            range.insertNode(highlight);
-            document.designMode = "off";
+          if (highlightedIndex == -1) {
+            highlightedIndex = 0;
           } else {
-            alert("No matches found lol");
+            highlightedIndex = highlightedIndex + 1;
           }
+
+          content = content.replace(highlightedText, highlightedText.replace('<mark>', '').replace('</mark>', ''));
+
+          highlightedText = content.match(pattern)[highlightedIndex];
+
+          if (highlightedText) {
+            content = content.replace(highlightedText, '<mark>' + highlightedText + '</mark>');
+            document.body.innerHTML = content;
+            var top = document.getElementsByTagName('mark')[0].getBoundingClientRect().top + window.pageYOffset - 100; // adjust scroll position as needed
+            window.scrollTo({top: top, behavior: 'smooth'});
+          } else {
+            alert("No more matches found");
+            highlightedIndex = -1;
+            content = content.replace('<mark>', '').replace('</mark>', '');
+            document.body.innerHTML = content;
+          }
+        } else {
+          alert("Please enter a search term");
         }
       }
-      </script>
+    </script>
   </head>
   <body>
     <header>
