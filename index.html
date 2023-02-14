@@ -55,7 +55,19 @@
     <script>
       function searchFunction() {
         var input = document.getElementById("search").value;
-        // Do something with the input value, such as search a list of items
+        if (input) {
+          if (window.find(input)) {
+            document.designMode = "on";
+            var range = window.getSelection().getRangeAt(0);
+            var highlight = document.createElement("span");
+            highlight.style.backgroundColor = "yellow";
+            highlight.appendChild(range.extractContents());
+            range.insertNode(highlight);
+            document.designMode = "off";
+          } else {
+            alert("No matches found");
+          }
+        }
       }
       </script>
   </head>
