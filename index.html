@@ -2,91 +2,29 @@
 <html>
   <head>
     <title>Potatoes</title>
-    <style>
-      body {
-        background-color: brown;
-        color: white;
-        font-family: Arial, sans-serif;
-      }
-      header {
-        text-align: center;
-      }
-      nav ul {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 20px;
-        list-style: none;
-        background-color: #6a4c3c;
-      }
-      nav a {
-        color: white;
-        text-decoration: none;
-        padding: 10px;
-        display: block;
-      }
-      main {
-        padding: 20px;
-      }
-      h2 {
-        text-align: center;
-      }
-      ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      li {
-        background-color: #a67c52;
-        padding: 10px 20px;
-        margin: 10px;
-        text-align: center;
-      }
-      footer {
-        background-color: #6a4c3c;
-        color: white;
-        text-align: center;
-        padding: 20px;
-      }
-      .center {
-        text-align: center;
-      }
-      .temp-highlight {
-        background-color: yellow;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <script>
-      var searchIndex = -1; // initialize index to -1
-      var matchedElements = [];
-      
-      function searchFunction() {
-        var input, filter, content, i, txtValue;
-        input = document.getElementById("search");
-        filter = input.value.toUpperCase();
-        content = document.body.innerHTML;
-        matchedElements = [];
-      
-        var elements = document.getElementsByTagName("*");
-        for (i = 0; i < elements.length; i++) {
-          txtValue = elements[i].textContent || elements[i].innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            matchedElements.push(elements[i]);
-          }
-        }
-        
-        if (matchedElements.length > 0) {
-          if (searchIndex >= matchedElements.length - 1) {
-            searchIndex = -1;
-          }
-          if (searchIndex >= 0) {
-            matchedElements[searchIndex].classList.remove("temp-highlight");
-          }
-          searchIndex++;
-          matchedElements[searchIndex].classList.add("temp-highlight");
+      const searchBox = document.getElementById("searchTerm");
+      const searchButton = document.getElementById("searchButton");
+    
+      searchButton.addEventListener("click", function(event) {
+        const searchTerm = searchBox.value;
+        const pageText = document.body.innerText;
+    
+        // Create a regular expression to match the search term with case-insensitivity
+        const regex = new RegExp(searchTerm, "gi");
+    
+        // Get an array of all the matches
+        const matches = pageText.match(regex);
+    
+        if (searchTerm && matches) {
+          // Highlight all the matches with a yellow background color
+          document.body.innerHTML = pageText.replace(regex, `<span class="highlight">${searchTerm}</span>`);
         } else {
-          alert("No matches found.");
+          // If search term is empty or no matches are found, remove all highlights
+          document.body.innerHTML = pageText;
         }
-      }
+      });
     </script>
   </head>
   <body>
@@ -100,8 +38,8 @@
         <li><a href="#facts">Potato Facts</a></li>
       </ul>
     </nav>
-    <input type="text" id="search" name="search" placeholder="Search...">
-    <button onclick="searchFunction()">Search</button>
+    <input type="text" id="searchTerm" placeholder="Search">
+    <button id="searchButton">Search</button>
     <main>
       <section id="recipes">
         <h2>Potato-Themed Food Recipes</h2>
