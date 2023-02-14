@@ -1,51 +1,103 @@
 body {
-    background-color: brown;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-  header {
-    text-align: center;
-  }
-  nav ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    list-style: none;
-    background-color: #6a4c3c;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-  }
-  main {
-    padding: 20px;
-  }
-  h2 {
-    text-align: center;
-  }
-  ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  li {
-    background-color: #a67c52;
-    padding: 10px 20px;
-    margin: 10px;
-    text-align: center;
-  }
-  footer {
-    background-color: #6a4c3c;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  .center {
-    text-align: center;
-  }
-  .temp-highlight {
-    background-color: yellow;
-  }
+  background-color: brown;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  list-style: none;
+  background-color: #6a4c3c;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+nav button {
+  background-color: #6a4c3c;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  background-color: #a67c52;
+  padding: 10px 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+footer {
+  background-color: #6a4c3c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+body.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+header.dark {
+  background-color: #444;
+}
+
+nav ul.dark {
+  background-color: #333;
+}
+
+nav a.dark {
+  color: #fff;
+}
+
+nav button.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+main.dark {
+  background-color: #333;
+}
+
+h2.dark {
+  color: #fff;
+}
+
+ul.dark li {
+  background-color: #555;
+}
+
+footer.dark {
+  background-color: #444;
+}

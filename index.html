@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Potatoes</title>
+    <title>Potatoes!</title>
     <link rel="stylesheet" href="style.css">
     <script>
       const searchBox = document.getElementById("searchTerm");
@@ -25,6 +25,23 @@
           document.body.innerHTML = pageText;
         }
       });
+
+      function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      document.querySelector('header').classList.toggle('dark');
+      document.querySelector('nav ul').classList.toggle('dark');
+      document.querySelectorAll('nav a').forEach(function(link) {
+        link.classList.toggle('dark');
+      });
+      document.querySelector('nav button').classList.toggle('dark');
+      document.querySelector('main').classList.toggle('dark');
+      document.querySelector('h2').classList.toggle('dark');
+      document.querySelectorAll('ul li').forEach(function(item) {
+        item.classList.toggle('dark');
+      });
+      document.querySelector('footer').classList.toggle('dark');
+    }
+
     </script>
   </head>
   <body>
@@ -40,6 +57,7 @@
     </nav>
     <input type="text" id="searchTerm" placeholder="Search">
     <button id="searchButton">Search</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     <main>
       <section id="recipes">
         <h2>Potato-Themed Food Recipes</h2>
