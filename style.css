@@ -1,103 +1,82 @@
 body {
-  background-color: brown;
-  color: white;
-  font-family: Arial, sans-serif;
+    background-color: #f3d4b4;
 }
-
-header {
-  text-align: center;
+.calculator {
+    border: 2px solid #7d5e34;
+    padding: 10px;
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+    background-color: #f5e5d5;
 }
-
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  list-style: none;
-  background-color: #6a4c3c;
+h1 {
+    text-align: center;
+    color: #7d5e34;
+    font-family: 'Verdana', sans-serif;
 }
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  display: block;
-}
-
-nav button {
-  background-color: #6a4c3c;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-main {
-  padding: 20px;
-}
-
 h2 {
-  text-align: center;
+    text-align: center;
 }
-
 ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7d5e34;
+  }
+  
 li {
-  background-color: #a67c52;
-  padding: 10px 20px;
-  margin: 10px;
-  text-align: center;
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-footer {
-  background-color: #6a4c3c;
-  color: white;
-  text-align: center;
-  padding: 20px;
+.banner {
+background-image: url('resources/banner.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+height: 300px;
+position: relative;
 }
 
-.center {
-  text-align: center;
+.banner-text {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #f3d4b4;
+padding: 10px;
+border: 1px solid #7d5e34;
+/* Change the link color to #111 (black) on hover */
 }
 
-body.dark {
-  background-color: #222;
-  color: #fff;
+li a:hover {
+    background-color: #111;
 }
-
-header.dark {
-  background-color: #444;
+button {
+    background-color: #7d5e34;
+    color: #f5e5d5;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
 }
-
-nav ul.dark {
-  background-color: #333;
+button:hover {
+    background-color: #f5e5d5;
+    color: #7d5e34;
 }
-
-nav a.dark {
-  color: #fff;
-}
-
-nav button.dark {
-  background-color: #333;
-  color: #fff;
-}
-
-main.dark {
-  background-color: #333;
-}
-
-h2.dark {
-  color: #fff;
-}
-
-ul.dark li {
-  background-color: #555;
-}
-
-footer.dark {
-  background-color: #444;
+input[type="number"] {
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #7d5e34;
 }

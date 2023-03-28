@@ -1,94 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Potatoes!</title>
+    <meta charset="UTF-8">
+    <title>The Tater Tot Spot</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-      const searchBox = document.getElementById("searchTerm");
-      const searchButton = document.getElementById("searchButton");
-    
-      searchButton.addEventListener("click", function(event) {
-        const searchTerm = searchBox.value;
-        const pageText = document.body.innerText;
-    
-        // Create a regular expression to match the search term with case-insensitivity
-        const regex = new RegExp(searchTerm, "gi");
-    
-        // Get an array of all the matches
-        const matches = pageText.match(regex);
-    
-        if (searchTerm && matches) {
-          // Highlight all the matches with a yellow background color
-          document.body.innerHTML = pageText.replace(regex, `<span class="highlight">${searchTerm}</span>`);
-        } else {
-          // If search term is empty or no matches are found, remove all highlights
-          document.body.innerHTML = pageText;
-        }
-      });
-
-      function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-      document.querySelector('header').classList.toggle('dark');
-      document.querySelector('nav ul').classList.toggle('dark');
-      document.querySelectorAll('nav a').forEach(function(link) {
-        link.classList.toggle('dark');
-      });
-      document.querySelector('nav button').classList.toggle('dark');
-      document.querySelector('main').classList.toggle('dark');
-      document.querySelector('h2').classList.toggle('dark');
-      document.querySelectorAll('ul li').forEach(function(item) {
-        item.classList.toggle('dark');
-      });
-      document.querySelector('footer').classList.toggle('dark');
-    }
-
-    </script>
   </head>
   <body>
-    <header>
-      <h1>Potatoes</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#recipes">Recipes</a></li>
-        <li><a href="#health">Health Benefits</a></li>
-        <li><a href="#facts">Potato Facts</a></li>
-      </ul>
-    </nav>
-    <input type="text" id="searchTerm" placeholder="Search">
-    <button id="searchButton">Search</button>
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-    <main>
-      <section id="recipes">
-        <h2>Potato-Themed Food Recipes</h2>
-        <ul>
-          <li>Baked Potato Wedges</li>
-          <li>Potato Soup</li>
-          <li>Roasted Garlic Mashed Potatoes</li>
-        </ul>
-      </section>
-      <section id="health">
-        <h2>Health Benefits of Potatoes</h2>
-        <ul>
-          <li>High in vitamins and minerals</li>
-          <li>Good source of fiber</li>
-          <li>Low in calories</li>
-        </ul>
-      </section>
-      <section id="facts">
-        <h2>Potato Facts that may surprise you!</h2>
-        <ul>
-          <li>Potato is a vegetable.</li>
-          <li>Potato is also known as a spud.</li>
-          <li>China is the world’s largest potato producer.</li>
-          <li>A potato has only around 100 calories.</li>
-          <li>You can be poisoned by potatoes.</li>
-        </ul>
-        <p class="center"><em>these facts maybe all lies but who knows, they could be true!</em></p>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2023 Potato-Themed Food Recipes and Health Benefits</p>
-    </footer>
+    <h1>The Tater Tot Spot</h1>
+    <ul>
+        <li><a href="#All Recipes">All Recipes</a></li>
+        <li><a href="#Potato Fun">Potato Fun</a></li>
+        <li><a href="#Potato Info">Potato Info</a></li>
+        <li><a href="#About Me">About Me</a></li>
+        <li style="float:right"><a href="#More">More</a></li>
+    </ul>
+    <div class="banner">
+      <div class="banner-text">
+        <h2>
+          Budget Potato Dinners
+        </h2>
+        <p>
+          Imagine being so poor you can't afford potatoes.
+        </p>
+      </div>
+    </div>
   </body>
 </html>
