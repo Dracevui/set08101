@@ -12,10 +12,12 @@ body {
 h1 {
     text-align: center;
     color: #7d5e34;
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Potato Chips', sans-serif;
+    font-size: 56px;
 }
 h2 {
     text-align: center;
+    font-family: 'Potato Chips', sans-serif;
 }
 ul {
     list-style-type: none;
@@ -23,6 +25,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #7d5e34;
+    font-family: 'Potato Chips', sans-serif;
   }
   
 li {
@@ -37,7 +40,7 @@ li a {
     text-decoration: none;
 }
 
-.banner {
+.banner1 {
 background-image: url('resources/banner.jpg');
 background-repeat: no-repeat;
 background-size: cover;
@@ -45,15 +48,57 @@ height: 300px;
 position: relative;
 }
 
+.banner2 {
+background-color: whitesmoke;
+background-repeat: no-repeat;
+background-size: cover;
+height: 300px;
+position: relative;
+}
+
+/* .mySlides {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: 0.5s ease-in;
+} */
+
+.slideshow {
+    position: relative;
+}
+
+.mySlides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+
+.mySlides.active {
+    opacity: 1;
+}
+
+.slideshow {
+    max-width: 100%;
+}
+
 .banner-text {
 position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+bottom: 10%;
+left: 2.5%;
 background-color: #f3d4b4;
 padding: 10px;
 border: 1px solid #7d5e34;
 /* Change the link color to #111 (black) on hover */
+}
+
+.divider {
+border-bottom: 1px solid #000;
+margin-top: 20px; /* add some margin to separate from the banner */
 }
 
 li a:hover {

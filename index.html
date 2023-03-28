@@ -14,7 +14,7 @@
         <li><a href="#About Me">About Me</a></li>
         <li style="float:right"><a href="#More">More</a></li>
     </ul>
-    <div class="banner">
+    <div class="banner1">
       <div class="banner-text">
         <h2>
           Budget Potato Dinners
@@ -24,5 +24,29 @@
         </p>
       </div>
     </div>
+    <div class="slideshow">
+      <img class="mySlides" src="resources/recipe1.jpg">
+      <img class="mySlides" src="resources/recipe2.jpg">
+      <img class="mySlides" src="resources/recipe3.jpg">
+      <img class="mySlides" src="resources/recipe4.jpg">
+    </div>
+
+    <script>
+      var myIndex = 0;
+      var slides = document.getElementsByClassName("mySlides");
+
+      function carousel() {
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].classList.remove("active");
+          }
+          myIndex++;
+          if (myIndex > slides.length) {
+            myIndex = 1;
+          }
+          slides[myIndex - 1].classList.add("active");
+          setTimeout(carousel, 3500);
+        }
+        carousel();
+    </script>
   </body>
 </html>
