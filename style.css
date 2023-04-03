@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'PotatoChips';
+    src: url('resources/PotatoChips.ttf');
+}
+
 body {
 background-color:#f3d4b4
 }
@@ -33,7 +38,7 @@ background-color:#f5e5d5
 h1 {
 text-align:center;
 color:#7d5e34;
-font-family:'Potato Chips',sans-serif;
+font-family:'PotatoChips',sans-serif;
 font-size:56px
 }
 
@@ -41,7 +46,7 @@ h2 {
 text-align:center;
 color:#7d5e34;
 font-size:36px;
-font-family:'Potato Chips',sans-serif
+font-family:'PotatoChips',sans-serif
 }
 
 h2.underline {
@@ -52,7 +57,7 @@ h3 {
 text-align:center;
 color:#7d5e34;
 font-size:20px;
-font-family:'Potato Chips',sans-serif
+font-family:'PotatoChips',sans-serif
 }
 
 h3.underline {
@@ -65,7 +70,7 @@ margin:0;
 padding:0;
 overflow:hidden;
 background-color:#7d5e34;
-font-family:'Potato Chips',sans-serif
+font-family:'PotatoChips',sans-serif
 }
 
 .footer {
@@ -76,7 +81,7 @@ background-color:#7d5e34;
 color:#fff;
 height:30px;
 width:100%;
-font-family:'Potato Chips',sans-serif;
+font-family:'PotatoChips',sans-serif;
 position:relative;
 clear:both
 }
