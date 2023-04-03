@@ -1,140 +1,161 @@
 body {
-    background-color: #f3d4b4;
+background-color:#f3d4b4
 }
+
+.logo-container {
+display:flex;
+justify-content:center;
+align-items:center
+}
+
+.logo-container img {
+max-width:30%;
+height:auto
+}
+
 .calculator {
-    border: 2px solid #7d5e34;
-    padding: 10px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    width: 300px;
-    text-align: center;
-    background-color: #f5e5d5;
+border:2px solid #7d5e34;
+padding:10px;
+margin:0 auto;
+margin-bottom:20px;
+width:300px;
+text-align:center;
+background-color:#f5e5d5
 }
+
 h1 {
-    text-align: center;
-    color: #7d5e34;
-    font-family: 'Potato Chips', sans-serif;
-    font-size: 56px;
+text-align:center;
+color:#7d5e34;
+font-family:'Potato Chips',sans-serif;
+font-size:56px
 }
+
 h2 {
-    text-align: center;
-    color: #7d5e34;
-    font-size: 36px;
-    font-family: 'Potato Chips', sans-serif;
+text-align:center;
+color:#7d5e34;
+font-size:36px;
+font-family:'Potato Chips',sans-serif
 }
+
 h2.underline {
-    text-decoration: underline;
+text-decoration:underline
 }
+
 h3 {
-    text-align: center;
-    color: #7d5e34;
-    font-size: 20px;
-    font-family: 'Potato Chips', sans-serif;
+text-align:center;
+color:#7d5e34;
+font-size:20px;
+font-family:'Potato Chips',sans-serif
 }
+
 h3.underline {
-    text-decoration: underline;
+text-decoration:underline
 }
+
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #7d5e34;
-    font-family: 'Potato Chips', sans-serif;
-  }
+list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;
+background-color:#7d5e34;
+font-family:'Potato Chips',sans-serif
+}
 
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #7d5e34;
-    color: white;
-    height: 30px;
-    width: 100%;
-    font-family: 'Potato Chips', sans-serif;
-    position: relative;
-    clear: both;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:#7d5e34;
+color:#fff;
+height:30px;
+width:100%;
+font-family:'Potato Chips',sans-serif;
+position:relative;
+clear:both
 }
 
 li {
-    float: left;
+float:left
 }
-  
+
 li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+display:block;
+color:#fff;
+text-align:center;
+padding:14px 16px;
+text-decoration:none
 }
 
 .banner1 {
-    background-image: url('resources/banner.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
-    position: relative;
+background-image:url(resources/banner.jpg);
+background-repeat:no-repeat;
+background-size:cover;
+height:300px;
+position:relative
 }
 
 .banner2 {
-    background-image: url('resources/banner2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
-    position: relative;
-    padding-top: 5%;
+background-image:url(resources/banner2.jpg);
+background-repeat:no-repeat;
+background-size:cover;
+height:300px;
+position:relative;
+padding-top:5%
 }
 
 .slideshow {
-    position: relative;
-    max-width: 100%;
+position:relative;
+max-width:100%
 }
 
 .mySlides {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    transition: opacity 1s ease-in-out;
+position:absolute;
+top:0;
+left:0;
+opacity:0;
+width:100%;
+height:350px;
+object-fit:cover;
+transition:opacity 1s ease-in-out
 }
 
 .mySlides.active {
-    opacity: 1;
+opacity:1
 }
 
 .banner-text {
-position: absolute;
-bottom: 10%;
-left: 2.5%;
-background-color: #f3d4b4;
-padding: 10px;
-border: 1px solid #7d5e34;
+position:absolute;
+bottom:10%;
+left:2.5%;
+background-color:#f3d4b4;
+padding:10px;
+border:1px solid #7d5e34
 }
 
 li a:hover {
-    background-color: #111;
+background-color:#111
 }
+
 button {
-    background-color: #7d5e34;
-    color: #f5e5d5;
-    border: none;
-    padding: 8px 16px;
-    text-align: center;
-    font-size: 16px;
-    margin-top: 10px;
-    cursor: pointer;
+background-color:#7d5e34;
+color:#f5e5d5;
+border:none;
+padding:8px 16px;
+text-align:center;
+font-size:16px;
+margin-top:10px;
+cursor:pointer
 }
+
 button:hover {
-    background-color: #3d352d;
-    color: white;
+background-color:#3d352d;
+color:#fff
 }
+
 input[type="number"] {
-    padding: 8px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 2px solid #7d5e34;
+padding:8px;
+margin:8px 0;
+box-sizing:border-box;
+border:none;
+border-bottom:2px solid #7d5e34
 }
