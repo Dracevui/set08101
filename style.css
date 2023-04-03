@@ -77,7 +77,10 @@ margin:0;
 padding:0;
 overflow:hidden;
 background-color:#7d5e34;
-font-family:'PotatoChips',sans-serif
+font-family:'PotatoChips',sans-serif;
+border: 5px solid #7d5e34;
+border-radius: 10px;
+box-shadow: 0px 0px 10px #7d5e34;
 }
 
 .footer {
@@ -91,6 +94,12 @@ width:100%;
 font-family:'PotatoChips',sans-serif;
 position: absolute;
 bottom: 0;
+border: 5px solid #7d5e34;
+border-radius: 10px;
+box-shadow: 0px 0px 10px #7d5e34;
+box-sizing: border-box;
+left: 0;
+right: 0;
 }
 
 li {
@@ -110,7 +119,9 @@ background-image:url(resources/banner.jpg);
 background-repeat:no-repeat;
 background-size:cover;
 height:300px;
-position:relative
+position:relative;
+border: 2px solid #f5e5d5;
+border-radius: 8px;
 }
 
 .banner2 {
@@ -136,7 +147,10 @@ height: 300px;
 object-fit: cover;
 opacity: 0;
 transition: opacity 1s ease-in-out;
+border: 2px solid #f5e5d5;
+border-radius: 8px;
 }
+
 .mySlides.active {
 opacity: 1;
 }
