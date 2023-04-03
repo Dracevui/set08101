@@ -6,14 +6,17 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
     <h1>The Tater Tot Spot</h1>
+
     <ul>
         <li><a href="#All Recipes">All Recipes</a></li>
-        <li><a href="#Potato Fun">Potato Fun</a></li>
+        <li><a href="calc.html">Potato Fun</a></li>
         <li><a href="#Potato Info">Potato Info</a></li>
         <li><a href="#About Me">About Me</a></li>
         <li style="float:right"><a href="#More">More</a></li>
     </ul>
+
     <div class="banner1">
       <div class="banner-text">
         <h2>
@@ -24,6 +27,7 @@
         </p>
       </div>
     </div>
+
     <div class="slideshow">
       <img class="mySlides" src="resources/recipe1.jpg">
       <img class="mySlides" src="resources/recipe2.jpg">
@@ -44,9 +48,14 @@
             myIndex = 1;
           }
           slides[myIndex - 1].classList.add("active");
-          setTimeout(carousel, 3500);
+          setTimeout(carousel, 3000);
         }
-        carousel();
+      carousel();
     </script>
-  </body>
+
+    <div class="footer">
+      <p>&copy; 2023 The Tater Tot Spot. All Rights Reserved.</p>
+    </div>
+
+  </body> 
 </html>

@@ -3,48 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <title>Weight in Potatoes Calculator</title>
-    <style>
-      body {
-        background-color: #f3d4b4;
-      }
-      .calculator {
-        border: 2px solid #7d5e34;
-        padding: 10px;
-        margin: 0 auto;
-        width: 300px;
-        text-align: center;
-        background-color: #f5e5d5;
-      }
-      h1 {
-        text-align: center;
-        color: #7d5e34;
-        font-family: 'Verdana', sans-serif;
-      }
-      button {
-        background-color: #7d5e34;
-        color: #f5e5d5;
-        border: none;
-        padding: 8px 16px;
-        text-align: center;
-        font-size: 16px;
-        margin-top: 10px;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #f5e5d5;
-        color: #7d5e34;
-      }
-      input[type="number"] {
-        padding: 8px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: none;
-        border-bottom: 2px solid #7d5e34;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Weight in Potatoes Calculator</h1>
+    <h1>The Tater Tot Spot</h1>
+
+    <ul>
+        <li><a href="#All Recipes">All Recipes</a></li>
+        <li><a href="calc.html">Potato Fun</a></li>
+        <li><a href="#Potato Info">Potato Info</a></li>
+        <li><a href="#About Me">About Me</a></li>
+        <li style="float:right"><a href="#More">More</a></li>
+    </ul>
+
+    <h2 class="underline">Weight in Potatoes Calculator</h2>
+
+    <h3 class="underline">Find out how much you weigh in potatoes!</h3>
+    
     <div class="calculator">
       <p>Enter your weight in kilograms:</p>
       <input type="number" id="weightInput">
@@ -52,6 +27,9 @@
       <button onclick="calculate()">Calculate</button>
       <p id="result"></p>
     </div>
+
+    <div class="banner2"></div>
+
     <script>
       function weightInPotatoes(weightInKg) {
         // assuming an average potato weighs 0.2 kg

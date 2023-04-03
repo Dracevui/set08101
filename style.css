@@ -5,6 +5,7 @@ body {
     border: 2px solid #7d5e34;
     padding: 10px;
     margin: 0 auto;
+    margin-bottom: 20px;
     width: 300px;
     text-align: center;
     background-color: #f5e5d5;
@@ -17,7 +18,21 @@ h1 {
 }
 h2 {
     text-align: center;
+    color: #7d5e34;
+    font-size: 36px;
     font-family: 'Potato Chips', sans-serif;
+}
+h2.underline {
+    text-decoration: underline;
+}
+h3 {
+    text-align: center;
+    color: #7d5e34;
+    font-size: 20px;
+    font-family: 'Potato Chips', sans-serif;
+}
+h3.underline {
+    text-decoration: underline;
 }
 ul {
     list-style-type: none;
@@ -27,7 +42,20 @@ ul {
     background-color: #7d5e34;
     font-family: 'Potato Chips', sans-serif;
   }
-  
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7d5e34;
+    color: white;
+    height: 30px;
+    width: 100%;
+    font-family: 'Potato Chips', sans-serif;
+    position: relative;
+    clear: both;
+}
+
 li {
     float: left;
 }
@@ -41,30 +69,25 @@ li a {
 }
 
 .banner1 {
-background-image: url('resources/banner.jpg');
-background-repeat: no-repeat;
-background-size: cover;
-height: 300px;
-position: relative;
+    background-image: url('resources/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    position: relative;
 }
 
 .banner2 {
-background-color: whitesmoke;
-background-repeat: no-repeat;
-background-size: cover;
-height: 300px;
-position: relative;
+    background-image: url('resources/banner2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+    padding-top: 5%;
 }
-
-/* .mySlides {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    transition: 0.5s ease-in;
-} */
 
 .slideshow {
     position: relative;
+    max-width: 100%;
 }
 
 .mySlides {
@@ -82,10 +105,6 @@ position: relative;
     opacity: 1;
 }
 
-.slideshow {
-    max-width: 100%;
-}
-
 .banner-text {
 position: absolute;
 bottom: 10%;
@@ -93,12 +112,6 @@ left: 2.5%;
 background-color: #f3d4b4;
 padding: 10px;
 border: 1px solid #7d5e34;
-/* Change the link color to #111 (black) on hover */
-}
-
-.divider {
-border-bottom: 1px solid #000;
-margin-top: 20px; /* add some margin to separate from the banner */
 }
 
 li a:hover {
@@ -115,8 +128,8 @@ button {
     cursor: pointer;
 }
 button:hover {
-    background-color: #f5e5d5;
-    color: #7d5e34;
+    background-color: #3d352d;
+    color: white;
 }
 input[type="number"] {
     padding: 8px;
