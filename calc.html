@@ -4,61 +4,63 @@
     <meta charset="UTF-8">
     <title>Potato Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/png" href="resources/icon.png"/>
+    <link rel="shortcut icon" type="image/png" href="resources/icon.png">
   </head>
   <body>
-    <a href="index.html">
-      <div class="logo-container">
-        <img src="resources/logo.png" alt="website logo">
-      </div>
-    </a>
-
-    <ul>
-      <li><a href="#All Recipes">All Recipes</a></li>
-      <li><a href="calc.html">Potato Fun</a></li>
-      <li><a href="#Potato Info">Potato Info</a></li>
-      <li><a href="#About Me">About Me</a></li>
-      <li style="float:right"><a href="#More">More</a></li>
-    </ul>
-
-    <div class="container">  
-      <div class="box">
-        <h2 class="underline">Weight in Potatoes Calculator</h2>
-        <h3 class="underline">Find out how much you weigh in potatoes!</h3>
-        <div class="calculator">
-          <p>Enter your weight in kilograms:</p>
-          <input type="number" id="weightInput">
-          <br><br>
-          <button onclick="calculate()">Calculate</button>
-          <p id="result"></p>
+    <header>
+      <a href="index.html">
+        <div class="logo-container">
+          <img src="resources/logo.png" alt="website logo">
         </div>
-      </div>
-      
-      <div class="banner2"></div>
-  
-      <script>
-        function weightInPotatoes(weightInKg) {
-          // assuming an average potato weighs 0.2 kg
-          const potatoWeight = 0.2;
-          const weightInPotatoes = weightInKg / potatoWeight;
-          const roundedWeight = weightInPotatoes.toFixed(2);
-          return `You weigh ${roundedWeight % 1 === 0 ? parseInt(roundedWeight) : roundedWeight} potatoes!`;
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#All Recipes">All Recipes</a></li>
+          <li><a href="calc.html">Potato Fun</a></li>
+          <li><a href="#Potato Info">Potato Info</a></li>
+          <li><a href="#About Me">About Me</a></li>
+          <li><a href="#More" style="float:right">More</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="container">
+        <div class="box">
+          <h2 class="underline">Weight in Potatoes Calculator</h2>
+          <h3 class="underline">Find out how much you weigh in potatoes!</h3>
+          <div class="calculator">
+            <p>Enter your weight in kilograms:</p>
+            <input type="number" id="weightInput">
+            <br><br>
+            <button onclick="calculate()">Calculate</button>
+            <p id="result"></p>
+          </div>
+        </div>
+        <div class="banner2"></div>
+      </section>
+    </main>
+    <script>
+      function weightInPotatoes(weightInKg) {
+        const potatoWeight = 0.2;
+        const weightInPotatoes = weightInKg / potatoWeight;
+        const roundedWeight = weightInPotatoes.toFixed(2);
+        return `You weigh ${roundedWeight % 1 === 0 ? parseInt(roundedWeight) : roundedWeight} potatoes!`;
+      }
+      function calculate() {
+        const weightInput = document.getElementById("weightInput");
+        const result = document.getElementById("result");
+        const weight = parseFloat(weightInput.value);
+        if (!isNaN(weight)) {
+          result.innerHTML = weightInPotatoes(weight);
+        } else {
+          result.innerHTML = "Please enter a valid weight.";
         }
-        function calculate() {
-          const weightInput = document.getElementById("weightInput");
-          const result = document.getElementById("result");
-          const weight = parseFloat(weightInput.value);
-          if (!isNaN(weight)) {
-            result.innerHTML = weightInPotatoes(weight);
-          } else {
-            result.innerHTML = "Please enter a valid weight.";
-          }
-        }
-      </script>
-    </div>
-    
-    <div class="footer">
-      <p>&copy; 2023 The Tater Tot Spot. All Rights Reserved.</p>
-    </div>
+      }
+    </script>
+    <footer class="footer">
+      <p>
+        &copy; 2023 The Tater Tot Spot. All Rights Reserved.
+      </p>
+    </footer>
   </body>
 </html>

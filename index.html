@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Tater Tot Spot</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/png" href="resources/icon.png"/>
+    <link rel="shortcut icon" type="image/png" href="resources/icon.png">
   </head>
   <body>
     <a href="index.html">
@@ -13,59 +13,54 @@
       </div>
     </a>
 
-    <ul>
+    <nav>
+      <ul>
         <li><a href="#All Recipes">All Recipes</a></li>
         <li><a href="calc.html">Potato Fun</a></li>
         <li><a href="#Potato Info">Potato Info</a></li>
         <li><a href="#About Me">About Me</a></li>
-        <li style="float:right"><a href="#More">More</a></li>
-    </ul>
+        <li><a href="#More" style="float:right">More</a></li>
+      </ul>
+    </nav>
 
-    <div class="container">
-      <div class="banner1">
-        <div class="banner-text">
-          <h2>
-            Budget Potato Dinners
-          </h2>
-          <p>
-            Imagine being so poor you can't afford potatoes.
-          </p>
-        </div>
-      </div>
+    <main>
+      <div class="container">
+        <section class="banner1">
+          <div class="banner-text">
+            <h2>Budget Potato Dinners</h2>
+            <p>Imagine being so poor you can't afford potatoes.</p>
+          </div>
+        </section>
+    
+        <section class="slideshow">
+          <img class="mySlides" src="resources/recipe1.jpg" alt="potato recipe">
+          <img class="mySlides" src="resources/recipe2.jpg" alt="potato recipe">
+          <img class="mySlides" src="resources/recipe3.jpg" alt="potato recipe">
+          <img class="mySlides" src="resources/recipe4.jpg" alt="potato recipe">
+        </section>
   
-      <div class="slideshow">
-        <img class="mySlides" src="resources/recipe1.jpg">
-        <img class="mySlides" src="resources/recipe2.jpg">
-        <img class="mySlides" src="resources/recipe3.jpg">
-        <img class="mySlides" src="resources/recipe4.jpg">
-      </div>
+        <script>
+          var myIndex = 0;
+          var slides = document.getElementsByClassName("mySlides");
   
-      <script>
-        var myIndex = 0;
-        var slides = document.getElementsByClassName("mySlides");
-
-        function carousel() {
-          for (var i = 0; i < slides.length; i++) {
-            slides[i].style.opacity = 0;
+          function carousel() {
+            for (var i = 0; i < slides.length; i++) {
+              slides[i].style.opacity = 0;
+            }
+            myIndex++;
+            if (myIndex > slides.length) {
+              myIndex = 1;
+            }
+            slides[myIndex - 1].style.opacity = 1;
+            setTimeout(carousel, 3000);
           }
-          myIndex++;
-          if (myIndex > slides.length) {
-            myIndex = 1;
-          }
-          slides[myIndex - 1].style.opacity = 1;
-          setTimeout(carousel, 3000);
-        }
-        carousel();
-      </script>
+          carousel();
+        </script>
+      </div>
+    </main>
 
-      
-    </div>
-
-    <div class="footer">
-      <p>
-        &copy; 2023 The Tater Tot Spot. All Rights Reserved.
-      </p>
-    </div>
-
+    <footer class="footer">
+      <p>&copy; 2023 The Tater Tot Spot. All Rights Reserved.</p>
+    </footer>
   </body> 
 </html>
