@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Potato Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/png" href="resources/icon.png">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/png" href="resources/icon.png" />
   </head>
   <body>
     <header>
       <a href="index.html">
         <div class="logo-container">
-          <img src="resources/logo.png" alt="website logo">
+          <img src="resources/logo.png" alt="website logo" />
         </div>
       </a>
       <nav>
@@ -19,7 +19,7 @@
           <li><a href="calc.html">Potato Fun</a></li>
           <li><a href="#Potato Info">Potato Info</a></li>
           <li><a href="about.html">About Me</a></li>
-          <li style="float:right"><a href="#More">More</a></li>
+          <li style="float: right"><a href="#More">More</a></li>
         </ul>
       </nav>
     </header>
@@ -30,8 +30,8 @@
           <h3 class="underline">Find out how much you weigh in potatoes!</h3>
           <div class="calculator">
             <p>Enter your weight in kilograms:</p>
-            <input type="number" id="weightInput">
-            <br><br>
+            <input type="number" id="weightInput" />
+            <br /><br />
             <button onclick="calculate()">Calculate</button>
             <p id="result"></p>
           </div>
@@ -44,7 +44,9 @@
         const potatoWeight = 0.2;
         const weightInPotatoes = weightInKg / potatoWeight;
         const roundedWeight = weightInPotatoes.toFixed(2);
-        return `You weigh ${roundedWeight % 1 === 0 ? parseInt(roundedWeight) : roundedWeight} potatoes!`;
+        return `You weigh ${
+          roundedWeight % 1 === 0 ? parseInt(roundedWeight) : roundedWeight
+        } potatoes!`;
       }
       function calculate() {
         const weightInput = document.getElementById("weightInput");
@@ -58,9 +60,7 @@
       }
     </script>
     <footer class="footer">
-      <p>
-        &copy; 2023 The Tater Tot Spot. All Rights Reserved.
-      </p>
+      <p>&copy; 2023 The Tater Tot Spot. All Rights Reserved.</p>
     </footer>
   </body>
 </html>
