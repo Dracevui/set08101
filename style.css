@@ -81,9 +81,10 @@ font-size: 40px;
 
 .content p {
 text-align: justify;
-font-family: 'Pacifico', cursive, 'Times New Roman', Times, serif;
+font-family: "PotatoChips", sans-serif;
 padding-left: 1rem;
 padding-right: 1rem;
+color:#3d352d;
 }
 
 h1,
