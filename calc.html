@@ -17,10 +17,21 @@
         <ul>
           <li><a href="#All Recipes">All Recipes</a></li>
           <li><a href="calc.html">Potato Fun</a></li>
-          <li><a href="#Potato Info">Potato Info</a></li>
+          <li><a href="info.html">Potato Info</a></li>
           <li><a href="about.html">About Me</a></li>
-          <li style="float: right"><a href="#More">More</a></li>
+          <li id="more-btn"><a href="#More">More</a></li>
         </ul>
+        <div id="more-menu">
+          <li><a href="#Facebook">Facebook</a></li>
+          <li>
+            <a
+              href="https://instagram.com/hamish.jacked.alsop?igshid=YmMyMTA2M2Y="
+              target="_blank"
+              >Instagram</a
+            >
+          </li>
+          <li><a href="#Twitter">Twitter</a></li>
+        </div>
       </nav>
     </header>
     <main>
@@ -39,26 +50,13 @@
         <div class="banner2"></div>
       </section>
     </main>
-    <script>
-      function weightInPotatoes(weightInKg) {
-        const potatoWeight = 0.2;
-        const weightInPotatoes = weightInKg / potatoWeight;
-        const roundedWeight = weightInPotatoes.toFixed(2);
-        return `You weigh ${
-          roundedWeight % 1 === 0 ? parseInt(roundedWeight) : roundedWeight
-        } potatoes!`;
-      }
-      function calculate() {
-        const weightInput = document.getElementById("weightInput");
-        const result = document.getElementById("result");
-        const weight = parseFloat(weightInput.value);
-        if (!isNaN(weight)) {
-          result.innerHTML = weightInPotatoes(weight);
-        } else {
-          result.innerHTML = "Please enter a valid weight.";
-        }
-      }
-    </script>
+
+    <!-- Potato Weight Calculator JS -->
+    <script src="javascripts/calculator.js"></script>
+
+    <!-- Sliding Navbar JavaScript -->
+    <script src="javascripts/sliding-navbar.js"></script>
+
     <footer class="footer">
       <p>&copy; 2023 The Tater Tot Spot. All Rights Reserved.</p>
     </footer>
