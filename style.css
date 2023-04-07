@@ -79,11 +79,19 @@ body {
 }
 
 .content p {
+  font-size: 20px;
+}
+
+p {
   text-align: justify;
   font-family: "PotatoChips", sans-serif;
   padding-left: 1rem;
   padding-right: 1rem;
   color: #3d352d;
+}
+
+footer p {
+  color: #f5e5d5;
 }
 
 h1,
@@ -185,7 +193,6 @@ li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease-in-out;
   border-radius: 10px;
   box-shadow: 0 0 10px #7d5e34;
   z-index: 9999;
@@ -240,6 +247,7 @@ button:hover {
   color: #fff;
 }
 
+.banner,
 .banner1,
 .banner2,
 .banner3 {
@@ -249,6 +257,12 @@ button:hover {
   position: relative;
   border: 2px solid #f5e5d5;
   border-radius: 8px;
+}
+
+.banner {
+  background-image: url(resources/potato-types.jpg);
+  background-position: center 25%;
+  box-shadow: 0 0 2px #7d5e34;
 }
 
 .banner1 {
