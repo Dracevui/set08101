@@ -331,7 +331,6 @@ input[type="number"] {
 @media only screen and (max-width: 480px) {
   .logo-container img {
     max-width: 70%;
-    height: auto;
   }
 
   .calculator {
@@ -353,27 +352,7 @@ input[type="number"] {
   p {
     font-size: 9.6px;
   }
-}
 
-@media only screen and (max-width: 320px) {
-  h1 {
-    font-size: 30px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  h3 {
-    font-size: 12px;
-  }
-
-  p {
-    font-size: 7.2px;
-  }
-}
-
-@media screen and (max-width: 480px) {
   #more-menu {
     width: 100%;
     right: -100%;
@@ -406,5 +385,23 @@ input[type="number"] {
     background-color: #3d352d;
     border-radius: 10px;
     box-shadow: 0 0 10px #7d5e34;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 7.2px;
   }
 }
