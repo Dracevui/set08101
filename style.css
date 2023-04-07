@@ -349,6 +349,10 @@ input[type="number"] {
   h3 {
     font-size: 16px;
   }
+
+  p {
+    font-size: 9.6px;
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -362,5 +366,9 @@ input[type="number"] {
 
   h3 {
     font-size: 12px;
+  }
+
+  p {
+    font-size: 7.2px;
   }
 }
