@@ -262,7 +262,9 @@ button:hover {
 .banner {
   background-image: url(resources/potato-types.jpg);
   background-position: center 25%;
-  box-shadow: 0 0 2px #7d5e34;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 0 10px #7d5e34;
 }
 
 .banner1 {
