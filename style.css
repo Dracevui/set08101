@@ -1,361 +1,211 @@
 @font-face {
-  font-family: "PotatoChips";
-  src: url(resources/PotatoChips.ttf) format("truetype");
-  font-weight: 400;
-  font-style: normal;
+    font-family: "PotatoChips";
+    src: url(resources/PotatoChips.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
 }
 
 .container,
 main {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 body {
-  background-color: #f3d4b4;
+    background-color: #f3d4b4;
 }
 
 .logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-container img {
-  max-width: 30%;
-  height: auto;
+    max-width: 30%;
+    height: auto;
 }
 
 .calculator {
-  border: 2px solid #7d5e34;
-  padding: 10px;
-  margin: 0 auto 20px;
-  width: 300px;
-  text-align: center;
-  background-color: #f5e5d5;
+    border: 2px solid #7d5e34;
+    padding: 10px;
+    margin: 0 auto 20px;
+    width: 300px;
+    text-align: center;
+    background-color: #f5e5d5;
 }
 
 .box,
 .box2 {
-  background-color: #faebd7;
-  margin: 0;
-  border: 2px solid #f5e5d5;
-  border-radius: 8px;
+    background-color: #faebd7;
+    margin: 0;
+    border: 2px solid #f5e5d5;
+    border-radius: 8px;
 }
 
 .box2 {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: auto;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    align-items: center;
 }
 
 .image {
-  width: 50%;
-  height: auto;
+    width: 50%;
+    height: auto;
 }
 
 .box2 img {
-  display: block;
-  object-position: center;
-  height: 770px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #7d5e34;
+    display: block;
+    object-position: center;
+    height: 770px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #7d5e34;
 }
 
 .content {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .content h3 {
-  text-align: center;
-  font-size: 40px;
+    text-align: center;
+    font-size: 40px;
 }
 
 .content p {
-  font-size: 20px;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    margin-top: 16px;
+}
+
+.dropdown-content a {
+    display: block;
+    background-color: #f5e5d5;
+    color: #7d5e34;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 p {
-  text-align: justify;
-  font-family: "PotatoChips", sans-serif;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  color: #3d352d;
+    text-align: justify;
+    font-family: "PotatoChips", sans-serif;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #3d352d;
 }
 
 footer p {
-  color: #f5e5d5;
+    color: #f5e5d5;
 }
 
 h1,
 h2,
 h3 {
-  text-align: center;
-  font-family: "PotatoChips", sans-serif;
+    text-align: center;
+    font-family: "PotatoChips", sans-serif;
 }
 
 h1 {
-  color: #7d5e34;
-  font-size: 56px;
+    color: #7d5e34;
+    font-size: 56px;
 }
 
 h2 {
-  color: #7d5e34;
-  font-size: 36px;
+    color: #7d5e34;
+    font-size: 36px;
 }
 
 h2.underline,
 h3.underline {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 h3 {
-  color: #7d5e34;
-  font-size: 20px;
+    color: #7d5e34;
+    font-size: 20px;
 }
 
 ul {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #7d5e34;
-  font-family: "PotatoChips", sans-serif;
-  border: 5px solid #7d5e34;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #7d5e34;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7d5e34;
+    font-family: "PotatoChips", sans-serif;
+    border: 5px solid #7d5e34;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #7d5e34;
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #7d5e34;
-  color: #fff;
-  height: 30px;
-  width: 100%;
-  font-family: "PotatoChips", sans-serif;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border: 5px solid #7d5e34;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #7d5e34;
-  box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7d5e34;
+    color: #fff;
+    height: 30px;
+    width: 100%;
+    font-family: "PotatoChips", sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 5px solid #7d5e34;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #7d5e34;
+    box-sizing: border-box;
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #7d5e34;
-  padding: 10px;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #7d5e34;
-  position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7d5e34;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #7d5e34;
+    position: relative;
 }
 
 li {
-  margin: 0 10px;
+    margin: 0 10px;
 }
 
 li a {
-  color: #f5e5d5;
-  text-decoration: none;
+    color: #f5e5d5;
+    text-decoration: none;
 }
 
 li a:hover {
-  color: #fff;
+    color: #fff;
 }
 
 #more-menu {
-  position: fixed;
-  list-style-type: none;
-  top: 0;
-  right: -150px;
-  width: 150px;
-  height: 100vh;
-  background-color: #f5e5d5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #7d5e34;
-  z-index: 9999;
-  transition: right 0.6s ease-out;
-}
-
-#more-menu a {
-  margin: 10px 0;
-  text-decoration: none;
-  color: #7d5e34;
-  font-family: "PotatoChips", sans-serif;
-}
-
-#more-menu li:hover a {
-  color: #f5e5d5;
-}
-
-#more-menu li {
-  padding: 1rem;
-}
-
-#more-menu li:hover {
-  background-color: #3d352d;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #7d5e34;
-}
-
-#more-menu.show {
-  right: 0;
-}
-
-#more-btn {
-  position: absolute;
-  right: 0;
-  padding-right: 0.5rem;
-  transition: right 0.6s ease-out;
-}
-
-button {
-  background-color: #7d5e34;
-  color: #f5e5d5;
-  border: none;
-  padding: 8px 16px;
-  text-align: center;
-  font-size: 16px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #3d352d;
-  color: #fff;
-}
-
-.banner,
-.banner1,
-.banner2,
-.banner3 {
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
-  position: relative;
-  border: 2px solid #f5e5d5;
-  border-radius: 8px;
-}
-
-.banner {
-  background-image: url(resources/potato-types.jpg);
-  background-position: center 25%;
-  border-radius: 8px;
-  border: none;
-  box-shadow: 0 0 10px #7d5e34;
-}
-
-.banner1 {
-  background-image: url(resources/banner.jpg);
-}
-
-.banner2 {
-  background-image: url(resources/banner2.jpg);
-  padding-top: 5%;
-}
-
-.banner3 {
-  background-image: url(resources/field.png);
-  height: 500px;
-  background-position: center 25%;
-}
-
-.slideshow {
-  position: relative;
-  max-width: 100%;
-}
-
-.mySlides {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  border: 2px solid #f5e5d5;
-  border-radius: 8px;
-}
-
-.mySlides.active {
-  opacity: 1;
-}
-
-.banner-text {
-  position: absolute;
-  bottom: 10%;
-  left: 2.5%;
-  background-color: #f3d4b4;
-  padding: 10px;
-  border: 1px solid #7d5e34;
-}
-
-input[type="number"] {
-  padding: 8px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-bottom: 2px solid #7d5e34;
-}
-
-@media only screen and (max-width: 768px) {
-  .logo-container img {
-    max-width: 50%;
-    height: auto;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .logo-container img {
-    max-width: 70%;
-  }
-
-  .calculator {
-    width: 90%;
-  }
-
-  h1 {
-    font-size: 40px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  h3 {
-    font-size: 16px;
-  }
-
-  p {
-    font-size: 9.6px;
-  }
-
-  #more-menu {
-    width: 100%;
-    right: -100%;
+    position: fixed;
+    list-style-type: none;
+    top: 0;
+    right: -150px;
+    width: 150px;
     height: 100vh;
     background-color: #f5e5d5;
     display: flex;
@@ -366,42 +216,211 @@ input[type="number"] {
     box-shadow: 0 0 10px #7d5e34;
     z-index: 9999;
     transition: right 0.6s ease-out;
-  }
+}
 
-  #more-menu a {
+#more-menu a {
     margin: 10px 0;
     text-decoration: none;
     color: #7d5e34;
     font-family: "PotatoChips", sans-serif;
-    font-size: 1.5rem;
-  }
+}
 
-  #more-menu li {
+#more-menu li:hover a {
+    color: #f5e5d5;
+}
+
+#more-menu li {
     padding: 1rem;
-    font-size: 2rem;
-  }
+}
 
-  #more-menu li:hover {
+#more-menu li:hover {
     background-color: #3d352d;
     border-radius: 10px;
     box-shadow: 0 0 10px #7d5e34;
-  }
+}
+
+#more-menu.show {
+    right: 0;
+}
+
+#more-btn {
+    position: absolute;
+    right: 0;
+    padding-right: 0.5rem;
+    transition: right 0.6s ease-out;
+}
+
+button {
+    background-color: #7d5e34;
+    color: #f5e5d5;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3d352d;
+    color: #fff;
+}
+
+.banner,
+.banner1,
+.banner2,
+.banner3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+    border: 2px solid #f5e5d5;
+    border-radius: 8px;
+}
+
+.banner {
+    background-image: url(resources/potato-types.jpg);
+    background-position: center 25%;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 10px #7d5e34;
+}
+
+.banner1 {
+    background-image: url(resources/banner.jpg);
+}
+
+.banner2 {
+    background-image: url(resources/banner2.jpg);
+    padding-top: 5%;
+}
+
+.banner3 {
+    background-image: url(resources/field.png);
+    height: 500px;
+    background-position: center 25%;
+}
+
+.slideshow {
+    position: relative;
+    max-width: 100%;
+}
+
+.mySlides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border: 2px solid #f5e5d5;
+    border-radius: 8px;
+}
+
+.mySlides.active {
+    opacity: 1;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 10%;
+    left: 2.5%;
+    background-color: #f3d4b4;
+    padding: 10px;
+    border: 1px solid #7d5e34;
+}
+
+input[type="number"] {
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #7d5e34;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo-container img {
+        max-width: 50%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .logo-container img {
+        max-width: 70%;
+    }
+
+    .calculator {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 9.6px;
+    }
+
+    #more-menu {
+        width: 100%;
+        right: -100%;
+        height: 100vh;
+        background-color: #f5e5d5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #7d5e34;
+        z-index: 9999;
+        transition: right 0.6s ease-out;
+    }
+
+    #more-menu a {
+        margin: 10px 0;
+        text-decoration: none;
+        color: #7d5e34;
+        font-family: "PotatoChips", sans-serif;
+        font-size: 1.5rem;
+    }
+
+    #more-menu li {
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    #more-menu li:hover {
+        background-color: #3d352d;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #7d5e34;
+    }
 }
 
 @media only screen and (max-width: 320px) {
-  h1 {
-    font-size: 30px;
-  }
+    h1 {
+        font-size: 30px;
+    }
 
-  h2 {
-    font-size: 18px;
-  }
+    h2 {
+        font-size: 18px;
+    }
 
-  h3 {
-    font-size: 12px;
-  }
+    h3 {
+        font-size: 12px;
+    }
 
-  p {
-    font-size: 7.2px;
-  }
+    p {
+        font-size: 7.2px;
+    }
 }
