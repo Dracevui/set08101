@@ -43,58 +43,33 @@
       </div>
     </nav>
 
-    <main>
-      <div class="container">
-        <section class="banner1">
-          <div class="banner-text">
-            <h2>Budget Potato Dinners</h2>
-            <p>Imagine being so poor you can't afford potatoes.</p>
-          </div>
-        </section>
+  <main>
+    <div class="container">
+      <section class="banner1">
+        <div class="banner-text">
+          <h2>Budget Potato Dinners</h2>
+          <p>Imagine being so poor you can't afford potatoes.</p>
+        </div>
+      </section>
 
-        <section class="slideshow">
-          <img
-            class="mySlides"
-            src="resources/recipe1.jpg"
-            alt="potato recipe"
-          />
-          <img
-            class="mySlides"
-            src="resources/recipe2.jpg"
-            alt="potato recipe"
-          />
-          <img
-            class="mySlides"
-            src="resources/recipe3.jpg"
-            alt="potato recipe"
-          />
-          <img
-            class="mySlides"
-            src="resources/recipe4.jpg"
-            alt="potato recipe"
-          />
-        </section>
+      <section class="slideshow">
+        <img class="mySlides" src="resources/recipe1.jpg" alt="potato recipe" />
+        <img class="mySlides" src="resources/recipe2.jpg" alt="potato recipe" />
+        <img class="mySlides" src="resources/recipe3.jpg" alt="potato recipe" />
+        <img class="mySlides" src="resources/recipe4.jpg" alt="potato recipe" />
+      </section>
 
-        <!-- Slideshow Time -->
-        <script src="javascripts/slideshow.js"></script>
-      </div>
-    </main>
+      <!-- Slideshow Time -->
+      <script src="javascripts/slideshow.js"></script>
+    </div>
+  </main>
 
     <!-- Sliding Navbar JavaScript -->
     <script src="javascripts/sliding-navbar.js"></script>
 
-    <script>
-      const dropdownBtn = document.querySelector("#dropdown-btn");
-      const dropdownMenu = document.querySelector("#dropdown-menu");
+  <footer class="footer">
+    <p>&copy; 2023 The Tater Tot Spot. All Rights Reserved.</p>
+  </footer>
+</body>
 
-      dropdownBtn.addEventListener("click", function () {
-        dropdownMenu.style.display =
-          dropdownMenu.style.display === "block" ? "none" : "block";
-      });
-    </script>
-
-    <footer class="footer">
-      <p>&copy; 2023 The Tater Tot Spot. All Rights Reserved.</p>
-    </footer>
-  </body>
 </html>
