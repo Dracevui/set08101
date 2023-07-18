@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dice Game</title>
+    <style>
+      /* CSS code for styling */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        text-align: center;
+      }
+      h1 {
+        color: #333;
+      }
+      label {
+        display: block;
+        margin: 10px 0;
+      }
+      #bet-type {
+        display: inline-block;
+        margin: 0 10px;
+      }
+      input[type="number"] {
+        width: 50px;
+        margin: 0 10px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      .result {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        background-color: #fff;
+      }
+      .result.won {
+        background-color: #b7e1cd;
+        border-color: #6da36b;
+      }
+      .result.lost {
+        background-color: #f8d7da;
+        border-color: #d43f3a;
+      }
+      .result .bet-type {
+        font-weight: bold;
+      }
+      .result .dice-sum {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dice Game</h1>
+    <form>
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="bet-type">Select your bet type:</label>
+      <select id="bet-type" name="bet-type" required>
+        <option value="under">Under 7</option>
+        <option value="over">Over 7</option>
+        <option value="seven">Exactly 7</option>
+      </select>
+
+      <label for="stake">Enter your stake:</label>
+      <input type="number" id="stake" name="stake" min="1" required />
+
+      <input type="submit" value="Roll Dice" />
+    </form>
+    <div id="results"></div>
+    <script>
+      /* JavaScript code for game logic */
+      const bank = 3;
+      const maxBets = 5;
+      const betCost = 1;
+      const stake = 2;
+      const winSeven = 5;
+      const winOthers = 2;
+      let bets = 0;
+      let totalBank = bank;
+      let playerName = "";
+      let gameEnded = false;
+      let rollButton = document.querySelector('input[type="submit"]');
+      let resultsDiv = document.getElementById("results");
+      let nameInput = document.getElementById("name");
+      let betTypeSelect = document.getElementById("bet-type");
+      let stakeInput = document.getElementById("stake");
+      let errorDiv = document.createElement("div");
+      errorDiv.style.color = "red";
+      errorDiv.style.margin = "10px";
+      function showError(message) {
+        errorDiv.textContent = message;
+        resultsDiv.appendChild(errorDiv);
+      }
+      function clearError() {
+        errorDiv.textContent = "";
+      }
+      function rollDice() {
+        if (gameEnded) return;
+        let betType = betTypeSelect.value;
+        let userStake = parseInt(stakeInput.value);
+        if (userStake > totalBank) {
+          showError("You don't have enough money to place this bet.");
+          return;
+        }
+        clearError();
+        totalBank -= betCost;
+        let diceSum = rollTwoDice();
+        let resultText =
+          playerName +
+          " bet " +
+          betType +
+          " with a stake of " +
+          userStake +
+          ". The sum of the dice is " +
+          diceSum +
+          ".";
+        if (betType === "under" && diceSum < 7) {
+          totalBank += userStake * winOthers;
+          resultText += " You won " + userStake * winOthers + "!";
+          createResultDiv(resultText, "won");
+        } else if (betType === "over" && diceSum > 7) {
+          totalBank += userStake * winOthers;
+          resultText += " You won " + userStake * winOthers + "!";
+          createResultDiv(resultText, "won");
+        } else if (betType === "seven" && diceSum === 7) {
+          totalBank += userStake * winSeven;
+          resultText += " You won " + userStake * winSeven + "!";
+          createResultDiv(resultText, "won");
+        } else {
+          resultText += " You lost " + userStake + ".";
+          createResultDiv(resultText, "lost");
+        }
+        bets += 1;
+        if (totalBank === 0) {
+          endGame("You have run out of money.");
+        } else if (bets === maxBets) {
+          endGame("You have used all your bets.");
+        }
+      }
+      function rollTwoDice() {
+        return (
+          Math.floor(Math.random() * 6) + 1 + Math.floor(Math.random() * 6) + 1
+        );
+      }
+      function createResultDiv(text, result) {
+        let resultDiv = document.createElement("div");
+        resultDiv.classList.add("result");
+        resultDiv.classList.add(result);
+        resultDiv.innerHTML = text;
+        resultsDiv.appendChild(resultDiv);
+      }
+      function endGame(message) {
+        gameEnded = true;
+        let endMessage = document.createElement("p");
+        endMessage.textContent = message;
+        resultsDiv.appendChild(endMessage);
+        rollButton.disabled = true;
+        let playAgain = confirm("Would you like to play again?");
+        if (playAgain) {
+          resetGame();
+        }
+      }
+      function resetGame() {
+        bets = 0;
+        totalBank = bank;
+        gameEnded = false;
+        rollButton.disabled = false;
+        resultsDiv.innerHTML = "";
+        nameInput.value = "";
+        betTypeSelect.selectedIndex = 0;
+        stakeInput.value = stake;
+        startGame();
+      }
+      function startGame() {
+        playerName = nameInput.value;
+        let welcomeMessage = document.createElement("p");
+        welcomeMessage.textContent =
+          "Welcome, " + playerName + "! You have " + totalBank + " dollars.";
+        resultsDiv.appendChild(welcomeMessage);
+        rollButton.addEventListener("click", rollDice);
+      }
+      startGame();
+    </script>
+  </body>
+</html>

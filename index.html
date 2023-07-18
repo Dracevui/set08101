@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>About Me</title>
+    <title>Tater Tot Spot</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" type="image/png" href="resources/icon.png" />
     <script
@@ -19,7 +19,7 @@
 
     <nav>
       <ul>
-        <li><a href="#All Recipes">All Recipes</a></li>
+        <li><a href="all_recipes.html">All Recipes</a></li>
         <li><a href="calc.html">Potato Fun</a></li>
         <li><a href="info.html">Potato Info</a></li>
         <li><a href="about.html">About Me</a></li>
@@ -82,6 +82,16 @@
 
     <!-- Sliding Navbar JavaScript -->
     <script src="javascripts/sliding-navbar.js"></script>
+
+    <script>
+      const dropdownBtn = document.querySelector("#dropdown-btn");
+      const dropdownMenu = document.querySelector("#dropdown-menu");
+
+      dropdownBtn.addEventListener("click", function () {
+        dropdownMenu.style.display =
+          dropdownMenu.style.display === "block" ? "none" : "block";
+      });
+    </script>
 
     <footer class="footer">
       <p>&copy; 2023 The Tater Tot Spot. All Rights Reserved.</p>
