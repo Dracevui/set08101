@@ -169,6 +169,7 @@ ul {
   padding-left: 1rem;
   padding-right: 1rem;
   color: #3d352d;
+  font-size: 20px;
 }
 
 .footer {
@@ -327,7 +328,8 @@ button:hover {
 
 .bannerRecipe {
   height: 500px;
-  background-position: center 65%;
+  background-position: center 75%;
+  background-size: 100%;
 }
 
 .slideshow {
